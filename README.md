@@ -32,7 +32,7 @@ Ensure you have the following installed on your development machine:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/stock-market-app.git
+    git clone https://github.com/gabrielJWblanco/techchallenge-standout.git
     cd stock-market-app
     ```
 
