@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Text, View, Image, StyleSheet } from 'react-native';
+import img from "../assets/LogoMarket.png"
 const SplashScreen = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
@@ -9,15 +10,15 @@ const SplashScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Image /* source={require("./assets/splash.png")} */ style={styles.image} />
-      <Text style={styles.title}>Bem-vindo ao Meu App</Text>
+      <Image  source={img} style={styles.image} />
+      <Text style={styles.title}>Market Inc.</Text>
     </View>
   );
 };
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#adaca3',
       alignItems: 'center',
       justifyContent: 'center',
     },
