@@ -16,7 +16,7 @@ import { Picker } from "@react-native-picker/picker";
 import { Icon } from "react-native-elements";
 import { Grid, LineChart } from "react-native-svg-charts";
 import * as shape from "d3-shape";
-import img from "../assets/LogoMarket.png"
+import img from "../assets/LogoMarket.png";
 import { YAxis } from "react-native-svg-charts";
 import { XAxis } from "react-native-svg-charts";
 
@@ -113,7 +113,7 @@ const MarketView = () => {
             <Picker.Item label="USD" value="USD" />
           </Picker>
         </View>
-        <Pressable onPress={startRotation}>
+        <Pressable onPress={startRotation} testID="refresh-button">
           <Animated.View style={{ transform: [{ rotate: rotateAnimation }] }}>
             <Icon name="autorenew" color="white" />
           </Animated.View>
@@ -124,11 +124,11 @@ const MarketView = () => {
         <ActivityIndicator size="large" color="#0f1f30" />
       ) : (
         <>
-          <View style={{ height: 200, flexDirection: 'row' }}>
+          <View style={{ height: 200, flexDirection: "row" }}>
             <YAxis
               data={openValues}
               contentInset={{ top: 20, bottom: 20 }}
-              svg={{ fontSize: 10, fill: 'grey' }}
+              svg={{ fontSize: 10, fill: "grey" }}
               numberOfTicks={6}
               formatLabel={(value) => `${value}`}
             />
@@ -136,7 +136,7 @@ const MarketView = () => {
               <LineChart
                 style={{ flex: 1 }}
                 data={openValues}
-                svg={{ stroke: '#0f1f30' }}
+                svg={{ stroke: "#0f1f30" }}
                 contentInset={{ top: 20, bottom: 20 }}
                 curve={shape.curveNatural}
               >
@@ -150,7 +150,7 @@ const MarketView = () => {
             renderItem={renderItem}
             horizontal
             keyExtractor={(item) => item.date}
-            style={{ height: 200, flexGrow: 0, marginTop:50 }}
+            style={{ height: 200, flexGrow: 0, marginTop: 50 }}
           />
         </>
       )}
@@ -204,8 +204,6 @@ const styles = StyleSheet.create({
   image: {
     width: 100,
     height: 100,
-
-
   },
 });
 

@@ -22,7 +22,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Splash">
         <Stack.Screen
-          name="Splash"
+          name="SplashScreen"
           component={SplashScreen}
           options={{ headerShown: false }}
         />
